@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = [
         {
             title: "Meu Website",
-            url: "https://seusite.com",
+            url: "https://kaiobrl.github.io/landingpage/",
             icon: "fas fa-globe",
             description: "Confira meu portfólio completo."
         },        
@@ -80,5 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('share-whatsapp').href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
     document.getElementById('share-instagram').href = `https://instagram.com/formato_livre/tweet?text=${pageTitle}&url=${pageUrl}`;
     document.getElementById('share-telegram').href = `https://t.me/share/url?url=${pageUrl}&text=${pageTitle}`;
+
 
 });
