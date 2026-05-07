@@ -81,5 +81,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('share-instagram').href = `https://instagram.com/formato_livre/tweet?text=${pageTitle}&url=${pageUrl}`;
     document.getElementById('share-telegram').href = `https://t.me/share/url?url=${pageUrl}&text=${pageTitle}`;
 
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = localStorage.getItem('theme');
+
+    const applyTheme = theme => {
+        const isDark = theme === 'dark';
+        document.body.classList.toggle('dark-mode', isDark);
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        themeToggle.setAttribute('aria-label', isDark ? 'Ativar modo claro' : 'Ativar modo escuro');
+    };
+
+    const initialTheme = storedTheme || 'dark';
+    applyTheme(initialTheme);
+    localStorage.setItem('theme', initialTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme);
+    });
 
 });
