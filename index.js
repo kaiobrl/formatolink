@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },        
         {
             title: "Compre na Minha Loja",
-            url: "https://minhaloja.com",
+            url: "https://catalogonanuvem.vercel.app",
             icon: "fas fa-shopping-cart",
             description: "Produtos exclusivos e com desconto."
         },
